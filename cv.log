@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.1 (MiKTeX 22.10) (format=lualatex 2023.1.28)  28 JAN 2023 13:02
+This is LuaHBTeX, Version 1.15.1 (MiKTeX 22.10) (format=lualatex 2023.1.28)  28 JAN 2023 13:06
  restricted system commands enabled.
 **C:/git/awesomecv/cv.tex
 (C:/git/awesomecv/cv.tex
@@ -602,7 +602,15 @@ G,.JBIG2,.JB2,.eps]
 
 ("C:/Program Files/MiKTeX/tex/latex/00miktex/epstopdf-sys.cfg"
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-)) [1
+))
+
+Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
+(lipsum)                'english' will be used instead.
+(lipsum)                
+(lipsum)                With LuaTeX, lipsum requires babel to get proper
+(lipsum)                hyphenation (you can use \usepackage[base]{babel}).
+
+[1
 
 {C:/Users/julian/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (./cv.aux))
 
@@ -612,14 +620,15 @@ Here is how much of LuaTeX's memory you used:
  413 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 48 glue_spec,
  5 attribute_list, 2 write nodes
-   avail lists: 2:279,3:145,4:10,5:24,6:6,7:220,9:94,11:6
+   avail lists: 2:305,3:163,4:22,5:172,6:12,7:4882,9:140,10:7,11:346
  36730 multiletter control sequences out of 65536+600000
  18 fonts using 1118495 bytes
- 100i,6n,98p,426b,634s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<//?/c:/program files/miktex/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on cv.pdf (1 page, 5364 bytes).
+ 100i,6n,98p,426b,619s stack positions out of 10000i,1000n,20000p,200000b,80000s
+<//?/c:/program files/miktex/fonts/opentype/public/lm/lmroman10-regular.otf><//?
+/c:/program files/miktex/fonts/opentype/public/lm/lmroman12-bold.otf>
+Output written on cv.pdf (1 page, 13331 bytes).
 
-PDF statistics: 16 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 23 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

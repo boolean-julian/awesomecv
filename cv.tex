@@ -14,16 +14,19 @@
 \newcommand{\myColorBar}[1] {
 	\begin{centering}
 		\begin{tikzpicture}[overlay]
-			\node[draw, rectangle, fill=Apricot!80, inner sep=2mm, minimum width=\pagewidth+1cm] (a) {\Large\bfseries #1};
-		\end{tikzpicture}\\[2em]
+			\node[draw=none, rectangle, fill=RoyalPurple!100, inner sep=2mm, minimum width=\pagewidth+1cm] (a) {\color{white}\Large\bfseries #1};
+		\end{tikzpicture}\\[1em]
 	\end{centering}
 }
 
 \begin{document}
 	\myColorBar{Background}
+	\lipsum[1]
 
 	\myColorBar{Skills}
+	\lipsum[2]
 
 	\myColorBar{Interests}
+	\lipsum[3]
 
 \end{document}
