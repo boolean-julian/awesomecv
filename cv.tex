@@ -1,32 +1,103 @@
-% awesome cv template. compile with xelatex.
+% awesome cv template. compile with lualatex.
 \documentclass[a4paper, 11pt]{article}
-\usepackage{fontspec}
 \usepackage[top=1.5cm, left=1cm, right=1cm, bottom=1cm]{geometry}
 \usepackage[onehalfspacing]{setspace}
 \usepackage{lipsum}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
 \usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{wasysym}
+\usepackage{array}
+\usepackage{parskip}
+
+% Font
+\usepackage{fontspec}
+\setmainfont{Roboto Condensed}
 
 % Geometry specification
 \pagenumbering{gobble}
 
 \newcommand{\myColorBar}[1] {
 	\begin{centering}
+		\vspace{4em}
 		\begin{tikzpicture}[overlay]
-			\node[draw=none, rectangle, fill=RoyalPurple!100, inner sep=2mm, minimum width=\pagewidth+1cm] (a) {\color{white}\Large\bfseries #1};
-		\end{tikzpicture}\\[1em]
+			\node [
+				draw=none,
+				rectangle, 
+				fill=TealBlue!70, 
+				inner sep=2mm, 
+				minimum width=\pagewidth,
+				minimum height=1cm
+			] (a) {
+				\begin{minipage}{\textwidth}
+					\flushleft
+					\color{white}\bfseries\Large #1\strut
+				\end{minipage}
+			};
+		\end{tikzpicture}\\
+		\vspace{2.5em}
 	\end{centering}
 }
 
+\newcommand{\myNameBar} {
+	\begin{center}
+		\begin{minipage}[b]{.7\textwidth}
+			\flushleft
+			\LARGE Julian \textbf{L\"uken}\normalsize\\
+			Expert in Signal Processing\\
+			and Applied Geometry
+		\end{minipage}
+		\begin{minipage}{.29\textwidth}
+			\flushright
+			IMAGE
+			%\includegraphics[height=4cm]{assets/round-nb.png}
+		\end{minipage}
+	\end{center}
+}
+
+\newcommand\VRule{\color{black!60}\vrule width 1pt}
+
 \begin{document}
+	\myNameBar
+
 	\myColorBar{Background}
-	\lipsum[1]
+	\begin{minipage}{.49\textwidth}
+		\begin{tabular}{@{}l!{\VRule}r}
+			seit 2019 	& Angewandte Informatik (M. Sc.) \\
+			seit 2019 	& Angewandte Informatik (M. Sc.) \\
+			seit 2019 	& Angewandte Informatik (M. Sc.) \\
+			seit 2019 	& Angewandte Informatik (M. Sc.) \\
+		\end{tabular}
+	\end{minipage}
+	\begin{minipage}{.49\textwidth}
+		\begin{tabular}{@{}l!{\VRule}r}
+			seit 2019 	& Angewandte Informatik (M. Sc.) \\
+			seit 2019 	& Angewandte Informatik (M. Sc.) \\
+			seit 2019 	& Angewandte Informatik (M. Sc.) \\
+			seit 2019 	& Angewandte Informatik (M. Sc.) \\
+		\end{tabular}
+	\end{minipage}
 
 	\myColorBar{Skills}
-	\lipsum[2]
+	\lipsum[3]
 
 	\myColorBar{Interests}
-	\lipsum[3]
+	\begin{minipage}{0.2\textwidth}
+		\centering Reading
+	\end{minipage}	
+	\begin{minipage}{0.2\textwidth}
+		\centering Music
+	\end{minipage}	
+	\begin{minipage}{0.2\textwidth}
+		\centering Programming
+	\end{minipage}	
+	\begin{minipage}{0.2\textwidth}
+		\centering Math
+	\end{minipage}	
+	\begin{minipage}{0.2\textwidth}
+		\centering Video Games
+	\end{minipage}	
+
 
 \end{document}
