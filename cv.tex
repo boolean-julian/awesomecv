@@ -1,0 +1,29 @@
+% awesome cv template. compile with xelatex.
+\documentclass[a4paper, 11pt]{article}
+\usepackage{fontspec}
+\usepackage[top=1.5cm, left=1cm, right=1cm, bottom=1cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{lipsum}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage[none]{hyphenat}
+
+% Geometry specification
+\pagenumbering{gobble}
+
+\newcommand{\myColorBar}[1] {
+	\begin{centering}
+		\begin{tikzpicture}[overlay]
+			\node[draw, rectangle, fill=Apricot!80, inner sep=2mm, minimum width=\pagewidth+1cm] (a) {\Large\bfseries #1};
+		\end{tikzpicture}\\[2em]
+	\end{centering}
+}
+
+\begin{document}
+	\myColorBar{Background}
+
+	\myColorBar{Skills}
+
+	\myColorBar{Interests}
+
+\end{document}
