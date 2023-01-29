@@ -1,6 +1,6 @@
 % awesome cv template. compile with lualatex.
-\documentclass[a4paper, 11pt]{article}
-\usepackage[top=1.5cm, left=1cm, right=1cm, bottom=1cm]{geometry}
+\documentclass[a4paper, 9pt]{article}
+\usepackage[top=1cm, left=1cm, right=1cm, bottom=1cm]{geometry}
 \usepackage[onehalfspacing]{setspace}
 \usepackage{lipsum}
 \usepackage[dvipsnames]{xcolor}
@@ -10,22 +10,31 @@
 \usepackage{wasysym}
 \usepackage{array}
 \usepackage{parskip}
+\usepackage[ngerman]{babel}
+\usepackage{fontawesome}
+\usepackage{adjustbox}
 
 % Font
 \usepackage{fontspec}
-\setmainfont{Roboto Condensed}
+
+% Symbols
+\newcommand{\myMapMarker} {{\color{Rhodamine}\faMapMarker{} }}
+\newcommand{\myMortarBoard} {{\color{MidnightBlue}\faMortarBoard{} }}
+\newcommand{\myFlask} {{\color{MidnightBlue}\faFlask{} }}
+\newcommand{\myRocket} {{\color{MidnightBlue}\faRocket{} }}
+\newcommand{\myWrench} {{\color{MidnightBlue}\faWrench{} }}
 
 % Geometry specification
 \pagenumbering{gobble}
 
 \newcommand{\myColorBar}[1] {
 	\begin{centering}
-		\vspace{4em}
+		\vspace{2.5em}
 		\begin{tikzpicture}[overlay]
 			\node [
 				draw=none,
 				rectangle, 
-				fill=TealBlue!70, 
+				fill=MidnightBlue, 
 				inner sep=2mm, 
 				minimum width=\pagewidth,
 				minimum height=1cm
@@ -36,7 +45,7 @@
 				\end{minipage}
 			};
 		\end{tikzpicture}\\
-		\vspace{2.5em}
+		\vspace{1.5em}
 	\end{centering}
 }
 
@@ -44,68 +53,86 @@
 	\begin{center}
 		\begin{minipage}[b]{.7\textwidth}
 			\flushleft
-			\LARGE Julian \textbf{L\"uken}\normalsize\\
+			{\LARGE Julian \textbf{Lüken}}\\
 			Expert in Signal Processing\\
 			and Applied Geometry
 		\end{minipage}
 		\begin{minipage}{.29\textwidth}
 			\flushright
-			IMAGE
-			%\includegraphics[height=4cm]{assets/round-nb.png}
+			Image
+			%\includegraphics[height=3cm]{assets/round-nb.png}
 		\end{minipage}
 	\end{center}
 }
 
-\newcommand\VRule{\color{black!60}\vrule width 1pt}
+\newcommand\VRule{\color{MidnightBlue}\vrule width 2pt}
+\newcommand\HRule{\color{MidnightBlue}\hrule width 2pt}
 \newcommand\tableSpace{0.6em}
 
 \begin{document}
 	\myNameBar
-
+	
 	\myColorBar{Education}
-	\begin{minipage}{.49\textwidth}
-		\textbf{Qualification}
-	\end{minipage}
-	\begin{minipage}{.49\textwidth}
-		\textbf{Academic Projects}
-	\end{minipage}
-
-	\begin{minipage}{.49\textwidth}
+	\begin{minipage}[t]{.49\textwidth}
+		\vspace{0pt}
+		\myMortarBoard \textbf{Qualification}\\[\tableSpace]
 		\begin{tabular}{@{}l!{\VRule}l}
-			2022--2023 	& Angewandte Informatik (M. Sc.) \\
-						& Coole Uni \\[\tableSpace]
+			2019--2023 	& Applied Computer Science (M. Sc.) \\
+						& Specialisation in Scientific Computing \\
+						& and Signal Processing \\
+						& \myMapMarker Georg-August University Göttingen \\[\tableSpace]
 
-			2019--2022 	& Angewandte Informatik (B. Sc.) \\
-						& Coole Uni \\[\tableSpace]
+			2016--2019 	& Applied Computer Science (B. Sc.) \\
+						& Specialisation in Scientific Computing \\
+						& \myMapMarker Georg-August University Göttingen \\[\tableSpace]
 
-			seit 2019 	& Angewandte Informatik (M. Sc.) \\[\tableSpace]
-			seit 2019 	& Angewandte Informatik (M. Sc.) \\[\tableSpace]
+			2003--2013 	& Abitur \\
+						& \myMapMarker Europaschule Gymnasium Rhauderfehn \\[\tableSpace]
 		\end{tabular}
 	\end{minipage}
-	\begin{minipage}{.49\textwidth}
+	\begin{minipage}[t]{.49\textwidth}
+		\vspace{0pt}
+		\myFlask \textbf{Academic Projects}\\[\tableSpace]
 		\begin{tabular}{@{}l!{\VRule}l}
-			2022--2023 	& Angewandte Informatik (M. Sc.) \\
-						& Coole Uni \\[\tableSpace]
+			2022 	& Master thesis project \textbf{CoolingGen} \\
+					& A parametric CAD software specially designed \\
+					& for generating turbine blade cooling geometries \\
+					& \myMapMarker German Aerospace Center, Göttingen \\[\tableSpace]
 
-			2019--2022 	& Angewandte Informatik (B. Sc.) \\
-						& Coole Uni \\[\tableSpace]
+			2019 	& Bachelor thesis project \textbf{SUSAN} \\
+					& Feature detection based on a combinatorial scheme \\
+					& \myMapMarker Inst. of Numerical and Applied Math, Göttingen \\[\tableSpace]
 
-			seit 2019 	& Angewandte Informatik (M. Sc.) \\[\tableSpace]
-			seit 2019 	& Angewandte Informatik (M. Sc.) \\[\tableSpace]
+			2018	& Scientific Computing Practical \\
+					& Denoising of piecewise constant images \\
+					& \myMapMarker Inst. of Numerical and Applied Math, Göttingen \\[\tableSpace]
+
 		\end{tabular}
 	\end{minipage}
 
 	\myColorBar{Practical Experience}
-	\begin{tabular}{@{}l!{\VRule}l}
-		2022--2023 	& Angewandte Informatik (M. Sc.) \\
-					& Coole Uni \\[\tableSpace]
+	\begin{minipage}[t]{.49\textwidth}
+		\vspace{0pt}
+		\myRocket \textbf{Career}\\[\tableSpace]
+		\begin{tabular}{@{}l!{\VRule}l}
+			2021--2023 	& Research Associate, Developer \\
+						& \myMapMarker German Aerospace Center, Göttingen \\[\tableSpace]
 
-		2019--2022 	& Angewandte Informatik (B. Sc.) \\
-					& Coole Uni \\[\tableSpace]
+			2019--2021 	& IT Department Staff Member \\
+						& \myMapMarker keydel bock ingenieure gmbh, Göttingen \\[\tableSpace]
+		\end{tabular}
+	\end{minipage}
+	\begin{minipage}[t]{.49\textwidth}
+		\vspace{0pt}
+		\myWrench \textbf{Jobs}\\[\tableSpace]
+		\begin{tabular}{@{}l!{\VRule}l}
+			2017--2019 	& Postman \\
+						& \myMapMarker Deutsche Post AG, Göttingen \\[\tableSpace]
 
-		seit 2019 	& Angewandte Informatik (M. Sc.) \\[\tableSpace]
-		seit 2019 	& Angewandte Informatik (M. Sc.) \\[\tableSpace]
-	\end{tabular}
+			2008--2012 	& IT Temp \\
+						& \myMapMarker Gebr. Bruns Heizkessel GmbH, Saterland\\[\tableSpace]
+		\end{tabular}
+	\end{minipage}
 
 	\myColorBar{Skills}
 	I don't have any.
