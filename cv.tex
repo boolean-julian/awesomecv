@@ -1,10 +1,11 @@
 % awesome cv template. compile with lualatex.
-\documentclass[a4paper, 9pt]{article}
-\usepackage[top=1cm, left=1cm, right=1cm, bottom=1cm]{geometry}
+\documentclass[a4paper, 10pt]{article}
+\usepackage[top=0.5cm, left=1cm, right=1cm, bottom=1cm]{geometry}
 \usepackage[onehalfspacing]{setspace}
 \usepackage{lipsum}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
+\usepackage{tikzpagenodes}
 \usepackage[none]{hyphenat}
 \usepackage{graphicx}
 \usepackage{wasysym}
@@ -17,16 +18,30 @@
 % Font
 \usepackage{fontspec}
 
-% Symbols
-\newcommand{\myMapMarker} {{\color{Rhodamine}\faMapMarker{} }}
-\newcommand{\myMortarBoard} {{\color{MidnightBlue}\faMortarBoard{} }}
-\newcommand{\myFlask} {{\color{MidnightBlue}\faFlask{} }}
-\newcommand{\myRocket} {{\color{MidnightBlue}\faRocket{} }}
-\newcommand{\myWrench} {{\color{MidnightBlue}\faWrench{} }}
+% Colors
+\newcommand{\myMainColor}{MidnightBlue!85}
 
-% Geometry specification
+% Rules
+\newcommand\VRule{\color{\myMainColor}\vrule width 2pt}
+\newcommand\HRule{\color{\myMainColor}\hrule width 2pt}
+\newcommand\tableSpace{0.6em}
+
+% Symbols
+\newcommand{\myMapMarker}{{\color{\myMainColor}\faMapMarker{} }}
+\newcommand{\myMortarBoard}{{\color{\myMainColor}\faMortarBoard{} }}
+\newcommand{\myFlask}{{\color{\myMainColor}\faFlask{} }}
+\newcommand{\myRocket}{{\color{\myMainColor}\faRocket{} }}
+\newcommand{\myWrench}{{\color{\myMainColor}\faWrench{} }}
+
+\newcommand{\myUser}{{\color{white}\faUser{} }}
+\newcommand{\myHome}{{\color{white}\faHome{} }}
+\newcommand{\myPhone}{{\color{white}\faPhone{} }}
+\newcommand{\myPaperPlane}{{\color{white}\faPaperPlane{} }}
+
+% No page numbers
 \pagenumbering{gobble}
 
+% Colored section bar
 \newcommand{\myColorBar}[1] {
 	\begin{centering}
 		\vspace{2.5em}
@@ -34,14 +49,14 @@
 			\node [
 				draw=none,
 				rectangle, 
-				fill=MidnightBlue, 
+				fill=\myMainColor, 
 				inner sep=2mm, 
 				minimum width=\pagewidth,
 				minimum height=1cm
 			] (a) {
 				\begin{minipage}{\textwidth}
-					\flushleft
-					\color{white}\bfseries\Large #1\strut
+					\flushleft\color{white}\bfseries\Large
+					#1\strut
 				\end{minipage}
 			};
 		\end{tikzpicture}\\
@@ -49,25 +64,50 @@
 	\end{centering}
 }
 
+% Header
 \newcommand{\myNameBar} {
 	\begin{center}
-		\begin{minipage}[b]{.7\textwidth}
+		\begin{minipage}[t]{.7\textwidth}
+			\vspace{0pt}
 			\flushleft
 			{\LARGE Julian \textbf{Lüken}}\\
 			Expert in Signal Processing\\
 			and Applied Geometry
 		\end{minipage}
-		\begin{minipage}{.29\textwidth}
+		\begin{minipage}[t]{.29\textwidth}
+			\vspace{0pt}
 			\flushright
-			Image
-			%\includegraphics[height=3cm]{assets/round-nb.png}
+			%Image
+			\includegraphics[height=3cm]{assets/round-nb.png}
 		\end{minipage}
 	\end{center}
 }
 
-\newcommand\VRule{\color{MidnightBlue}\vrule width 2pt}
-\newcommand\HRule{\color{MidnightBlue}\hrule width 2pt}
-\newcommand\tableSpace{0.6em}
+% Footer
+\newcommand{\myFooter} {
+	\begin{centering}
+		\begin{tikzpicture}[remember picture, overlay]
+			\node [
+				draw=none,
+				anchor=north,
+				rectangle, 
+				fill=\myMainColor, 
+				inner sep=2mm, 
+				minimum width=\pagewidth,
+				minimum height=1cm
+			] at (current page text area.south) {
+				\begin{minipage}{\textwidth}
+					\centering\color{white}\footnotesize\bfseries
+					\myPaperPlane julian-lueken@t-online.de
+					\hspace{2em}
+					\myPhone +49 1577 3587775
+					\hspace{2em}
+					\myHome Am Hachweg 1, 37083 Göttingen, Germany
+				\end{minipage}
+			};
+		\end{tikzpicture}
+	\end{centering}
+}
 
 \begin{document}
 	\myNameBar
@@ -154,5 +194,5 @@
 		\centering Video Games
 	\end{minipage}	
 
-
+	\myFooter
 \end{document}
