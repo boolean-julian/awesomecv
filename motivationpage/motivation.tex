@@ -1,0 +1,68 @@
+% nice cv template
+% by julian lueken (c)
+
+\documentclass[11pt, a4paper]{article}
+\usepackage{array, xcolor, lipsum, graphicx}
+\usepackage{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[ngerman]{babel}
+\usepackage{titlesec}
+
+\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+
+\titleformat*{\section}{\Large\bfseries}
+
+\newcommand{\mybigspace}{.5em}
+\newcommand{\ltrspace}{2em}
+\newcommand{\hlfspace}{1em}
+
+\newcommand{\myname}{Julian Lüken}
+\newcommand{\myemail}{julian.lueken@stud.uni-goettingen.de}
+\newcommand{\mystreet}{Am Hachweg 1}
+\newcommand{\mycity}{37083 Göttingen}
+\newcommand{\myphone}{01577 3587775}
+\newcommand{\recipient}{
+		\textbf{Knappschaft}\\
+		\textbf{Bürgerentlastungsgesetz KV}\\
+		\textbf{Fachzentrum Beitragseinzug}\\
+		Knappschaftstraße 1\\
+		44799 Bochum
+}
+
+% remove if more than one page
+\pagenumbering{gobble}
+\newgeometry{top=4.5cm, left=2.5cm, right=2cm, bottom=2.5cm}
+\begin{document}
+\begin{center}
+
+	\noindent
+	\begin{minipage}{\textwidth}
+		\flushleft
+		\scriptsize \myname{} $\cdot$ \mystreet{} $\cdot$ \mycity{} \\
+		\normalsize \recipient
+	\end{minipage}
+
+	\vspace{6em}
+	\flushright
+	\begin{minipage}{\textwidth}
+		\flushright
+		\today
+	\end{minipage}\\[\hlfspace]
+	\flushleft
+	\begin{minipage}{\textwidth}
+		\flushleft
+		\textbf{AW: Rechnung}
+	\end{minipage}
+\end{center}
+\setlength{\parindent}{0pt}
+Sehr geehrte Damen und Herren,
+\vspace{\hlfspace}
+
+mein Studentenstatus hat sich in den letzten Monaten nicht verändert. Das ist der angehängten Immatrikulationsbescheinigung auch zu entnehmen. Darum bitte ich zusätzlich zu dieser \glqq{}Veränderung\grqq{} um eine Überprüfung der letzten Rechnung (für Dezember). Mein Studium endet voraussichtlich am 31. März 2023. Ich danke vielmals. Über eine Rückmeldung würde ich mich sehr freuen.\vspace{\hlfspace}
+
+Mit freundlichen Grüßen\\[\ltrspace]
+\includegraphics[height=3em]{../assets/sign.png}
+\\[\hlfspace]
+\myname
+
+\end{document}
