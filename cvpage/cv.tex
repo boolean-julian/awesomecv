@@ -1,42 +1,64 @@
 % awesome cv template. compile with lualatex.
 \documentclass[a4paper, 10pt]{article}
-\usepackage[top=0.5cm, left=1cm, right=1cm, bottom=1cm]{geometry}
-\usepackage[onehalfspacing]{setspace}
-\usepackage{lipsum}
+
+% Graphics and colors
 \usepackage[dvipsnames]{xcolor}
-\usepackage{tikz}
-\usepackage{tikzpagenodes}
-\usepackage[none]{hyphenat}
-\usepackage{graphicx}
-\usepackage{wasysym}
-\usepackage{array}
-\usepackage{parskip}
-\usepackage[ngerman]{babel}
-\usepackage{fontawesome}
-\usepackage{adjustbox}
+\usepackage{tikz, tikzpagenodes}
+\usetikzlibrary{patterns}
 
 % Font
-\usepackage{fontspec}
+\usepackage{fontawesome, fontspec}
 
-% Colors
-\newcommand{\myMainColor}{MidnightBlue!85}
+% Formatting
+\usepackage[top=0.5cm, left=1cm, right=1cm, bottom=1cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[none]{hyphenat}
+\usepackage{array, parskip, adjustbox}
 
-% Rules
-\newcommand\VRule{\color{\myMainColor}\vrule width 2pt}
-\newcommand\HRule{\color{\myMainColor}\hrule width 2pt}
+% Data
+\newcommand{\myFirstName}{Julian}
+\newcommand{\myLastName}{Lüken}
+\newcommand{\myEmail}{julian-lueken@t-online.de}
+\newcommand{\myStreet}{Am Hachweg 1}
+\newcommand{\myCity}{37083 Göttingen}
+\newcommand{\myPhone}{+49 1577 3587775}
+\newcommand{\myCountry}{Germany}
+
+% Set document font
+\setmainfont[
+	Extension	= .ttf,
+	Ligatures	= TeX,
+	BoldFont	= NotoSans-CondensedBold,
+	ItalicFont	= NotoSans-CondensedItalic
+]{NotoSans-Condensed}
+
+% Set trim color
+\newcommand{\myMainColor}{Black!90}
+
+% Rules and spaces
+\newcommand\VRule{\color{\myMainColor}\vrule width 1pt}
+\newcommand\HRule{\color{\myMainColor}\hrule width 1pt}
 \newcommand\tableSpace{0.6em}
 
 % Symbols
-\newcommand{\myMapMarker}{{\color{\myMainColor}\faMapMarker{} }}
-\newcommand{\myMortarBoard}{{\color{\myMainColor}\faMortarBoard{} }}
-\newcommand{\myFlask}{{\color{\myMainColor}\faFlask{} }}
-\newcommand{\myRocket}{{\color{\myMainColor}\faRocket{} }}
-\newcommand{\myWrench}{{\color{\myMainColor}\faWrench{} }}
+\newcommand{\icMapMarker}{{\color{\myMainColor}\faMapMarker{} }}
+\newcommand{\icMortarBoard}{{\color{\myMainColor}\faMortarBoard{} }}
+\newcommand{\icFlask}{{\color{\myMainColor}\faFlask{} }}
+\newcommand{\icRocket}{{\color{\myMainColor}\faRocket{} }}
+\newcommand{\icWrench}{{\color{\myMainColor}\faWrench{} }}
 
-\newcommand{\myUser}{{\color{white}\faUser{} }}
-\newcommand{\myHome}{{\color{white}\faHome{} }}
-\newcommand{\myPhone}{{\color{white}\faPhone{} }}
-\newcommand{\myPaperPlane}{{\color{white}\faPaperPlane{} }}
+\newcommand{\icUser}{{\color{white}\faUser{} }}
+\newcommand{\icHome}{{\color{white}\faHome{} }}
+\newcommand{\icPhone}{{\color{white}\faPhone{} }}
+\newcommand{\icPlane}{{\color{white}\faPaperPlane{} }}
+
+\newcommand{\icCube}{{\color{\myMainColor}\faCube{} }}
+\newcommand{\icFilter}{{\color{\myMainColor}\faFilter{} }}
+\newcommand{\icKeybrd}{{\color{\myMainColor}\faKeyboardO{} }}
+\newcommand{\icMath}{{\color{\myMainColor}\faSuperscript{} }}
+\newcommand{\icTerm}{{\color{\myMainColor}\faTerminal{} }}
+\newcommand{\icLang}{{\color{\myMainColor}\faCommentingO{} }}
+
 
 % No page numbers
 \pagenumbering{gobble}
@@ -44,7 +66,7 @@
 % Colored section bar
 \newcommand{\myColorBar}[1] {
 	\begin{centering}
-		\vspace{2.5em}
+		\vspace{2em}
 		\begin{tikzpicture}[overlay]
 			\node [
 				draw=none,
@@ -52,15 +74,15 @@
 				fill=\myMainColor, 
 				inner sep=2mm, 
 				minimum width=\pagewidth,
-				minimum height=1cm
+				minimum height=0.6cm
 			] (a) {
 				\begin{minipage}{\textwidth}
-					\flushleft\color{white}\bfseries\Large
+					\flushleft\color{white}\bfseries
 					#1\strut
 				\end{minipage}
 			};
 		\end{tikzpicture}\\
-		\vspace{1.5em}
+		\vspace{1em}
 	\end{centering}
 }
 
@@ -70,14 +92,14 @@
 		\begin{minipage}[t]{.7\textwidth}
 			\vspace{0pt}
 			\flushleft
-			{\LARGE Julian \textbf{Lüken}}\\
-			Expert in Signal Processing\\
-			and Applied Geometry
+			{\Huge \myFirstName{} \textbf{\myLastName}}\\
+			{Expert in Signal Processing and Applied Geometry}
 		\end{minipage}
 		\begin{minipage}[t]{.29\textwidth}
 			\vspace{0pt}
 			\flushright
-			%Image
+
+			%\phantom{a}
 			\includegraphics[height=3cm]{../assets/round-nb.png}
 		\end{minipage}
 	\end{center}
@@ -97,62 +119,78 @@
 				minimum height=1cm
 			] at (current page text area.south) {
 				\begin{minipage}{\textwidth}
-					\centering\color{white}\footnotesize\bfseries
-					\myPaperPlane julian-lueken@t-online.de
-					\hspace{2em}
-					\myPhone +49 1577 3587775
-					\hspace{2em}
-					\myHome Am Hachweg 1, 37083 Göttingen, Germany
+					\centering\color{white}\footnotesize
+					\icPlane{} \myEmail
+					\hspace{3em}
+					\icPhone{} \myPhone
+					\hspace{3em}
+					\icHome{} \myStreet, \myCity, \myCountry
 				\end{minipage}
 			};
 		\end{tikzpicture}
 	\end{centering}
 }
 
+% Signature
+\newcommand{\mySignature} {
+	\begin{centering}
+		\begin{tikzpicture}[remember picture, overlay]
+			\node [
+				draw=none, 
+				anchor=east,
+				yshift=1cm
+			] at (current page text area.south east) {
+				\includegraphics[height=3em]{../assets/sign.png}
+			};
+		\end{tikzpicture}
+	\end{centering}
+}
+
+% Actual document
 \begin{document}
 	\myNameBar
-	
+
 	\myColorBar{Education}
 	\begin{minipage}[t]{.49\textwidth}
 		\vspace{0pt}
-		\myMortarBoard \textbf{Qualification}\\[\tableSpace]
-		\begin{tabular}{@{}l!{\VRule}l}
+		\icMortarBoard \textbf{Qualification}\\[\tableSpace]
+		\begin{tabular}{@{}r!{\VRule}l}
 			2019--2023 	& Applied Computer Science (M. Sc.) \\
 						& Specialisation in Scientific Computing \\
 						& and Signal Processing \\
-						& \myMapMarker Georg-August University Göttingen \\[\tableSpace]
+						& \icMapMarker Georg-August University Göttingen \\[\tableSpace]
 
 			2016--2019 	& Applied Computer Science (B. Sc.) \\
 						& Specialisation in Scientific Computing \\
-						& \myMapMarker Georg-August University Göttingen \\[\tableSpace]
+						& \icMapMarker Georg-August University Göttingen \\[\tableSpace]
 
 			2014--2016 	& Mathematics (B.Sc.) \\
 						& Discontinued \\
-						& \myMapMarker Georg-August University Göttingen \\[\tableSpace]
+						& \icMapMarker Georg-August University Göttingen \\[\tableSpace]
 
-			2003--2013 	& Abitur \\
-						& \myMapMarker Europaschule Gymnasium Rhauderfehn \\[\tableSpace]
+			2013 		& Abitur \\
+						& \icMapMarker Europaschule Gymnasium Rhauderfehn \\[\tableSpace]
 		\end{tabular}
 	\end{minipage}
 	\begin{minipage}[t]{.49\textwidth}
 		\vspace{0pt}
-		\myFlask \textbf{Academic Projects}\\[\tableSpace]
-		\begin{tabular}{@{}l!{\VRule}l}
-			2022 	& Master thesis project \textbf{CoolingGen} \\
-					& A parametric CAD software specially designed \\
+		\icFlask \textbf{Academic Projects}\\[\tableSpace]
+		\begin{tabular}{@{}r!{\VRule}l}
+			2022 	& Master thesis project {\bfseries CoolingGen} \\
+					& A parametric CAD software using NURBS, specifically designed \\
 					& for generating turbine blade cooling geometries \\
-					& Grade: 1.0 \\
-					& \myMapMarker German Aerospace Center, Göttingen \\[\tableSpace]
+					& Graded 1.0 \\
+					& \icMapMarker German Aerospace Center, Göttingen \\[\tableSpace]
 
-			2019 	& Bachelor thesis project \textbf{SUSAN} \\
-					& Feature detection based on a combinatorial scheme \\
-					& Grade: 1.1 \\
-					& \myMapMarker Inst. of Numerical and Applied Math, Göttingen \\[\tableSpace]
+			2019 	& Bachelor thesis project {\bfseries SUSAN} \\
+					& Image feature detection based on a combinatorial scheme \\
+					& Graded 1.1 \\
+					& \icMapMarker Institute of Numerical and Applied Math, Göttingen \\[\tableSpace]
 
 			2018	& Scientific Computing Practical \\
 					& Denoising of piecewise constant images \\
-					& Grade: 1.0 \\
-					& \myMapMarker Inst. of Numerical and Applied Math, Göttingen \\[\tableSpace]
+					& Graded 1.0 \\
+					& \icMapMarker Institute of Numerical and Applied Math, Göttingen \\[\tableSpace]
 
 		\end{tabular}
 	\end{minipage}
@@ -160,32 +198,60 @@
 	\myColorBar{Practical Experience}
 	\begin{minipage}[t]{.49\textwidth}
 		\vspace{0pt}
-		\myRocket \textbf{Career}\\[\tableSpace]
-		\begin{tabular}{@{}l!{\VRule}l}
+		\icRocket \textbf{Career}\\[\tableSpace]
+		\begin{tabular}{@{}r!{\VRule}l}
 			2021--2023 	& Research Associate, Developer \\
-						& \myMapMarker German Aerospace Center, Göttingen \\[\tableSpace]
+						& \icMapMarker German Aerospace Center, Göttingen \\[\tableSpace]
 
 			2019--2021 	& IT Department Staff Member \\
-						& \myMapMarker keydel bock ingenieure gmbh, Göttingen \\[\tableSpace]
+						& \icMapMarker keydel bock ingenieure gmbh, Göttingen \\[\tableSpace]
 		\end{tabular}
 	\end{minipage}
 	\begin{minipage}[t]{.49\textwidth}
 		\vspace{0pt}
-		\myWrench \textbf{Jobs}\\[\tableSpace]
-		\begin{tabular}{@{}l!{\VRule}l}
+		\icWrench \textbf{Jobs}\\[\tableSpace]
+		\begin{tabular}{@{}r!{\VRule}l}
 			2017--2019 	& Postman \\
-						& \myMapMarker Deutsche Post AG, Göttingen \\[\tableSpace]
+						& \icMapMarker Deutsche Post AG, Göttingen \\[\tableSpace]
 
 			2008--2012 	& IT Temp \\
-						& \myMapMarker Gebr. Bruns Heizkessel GmbH, Saterland\\[\tableSpace]
+						& \icMapMarker Gebr. Bruns Heizkessel GmbH, Saterland\\[\tableSpace]
 		\end{tabular}
 	\end{minipage}
 
 	\myColorBar{Skills}
-	None
-	
-	\myColorBar{Interests}
-	None
+	\begin{minipage}[t]{.49\textwidth}
+		\vspace{0pt}
+		\begin{tabular}{@{}c@{\phantom{ }}l!{\VRule}l}
+			\icKeybrd	& Programming		& Long-time experience with 				\\
+						& Languages			& Matlab, Python, C, C++ 					\\[\tableSpace]
 
+			\icFilter	& Digital Signal 	& Processing tools (opencv, scipy) 			\\
+						& Processing		& and visualization tools (matplotlib) 		\\[\tableSpace]
+							
+			\icCube 	& Computer-Aided	& Programming with OpenCASCADE				\\
+						& Design			& or my personal C++ CAD kernel				\\
+						& 					& (visualization with FreeCAD) 				\\[\tableSpace]
+		\end{tabular}
+	\end{minipage}
+	\begin{minipage}[t]{.49\textwidth}
+		\vspace{0pt}
+		\begin{tabular}{@{}c@{\phantom{ }}l!{\VRule}l}
+			\icMath 	& Math 			& Excellent knowledge of Geometry, 			\\
+						&				& Linear Algebra and Fourier Analysis 		\\[\tableSpace]
+			\icLang 	& Languages 	& German (native), English (CEFR C1) 		\\[\tableSpace]
+			\icTerm		& Misc			& LaTeX, Javascript, HTML, CSS, git, bash 	\\[\tableSpace]
+		\end{tabular}
+	\end{minipage}
+
+	\myColorBar{Interests}
+	\begin{minipage}[t]{.49\textwidth}
+		\vspace{0pt}
+		\begin{tabular}{@{}l}
+			Hiking, playing the guitar, cooking, reading, going out, playing video games.
+		\end{tabular}
+	\end{minipage}
+
+	\mySignature
 	\myFooter
 \end{document}

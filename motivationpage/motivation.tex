@@ -1,33 +1,47 @@
-% nice cv template
-% by julian lueken (c)
+% awesome cv template. compile with lualatex.
+\documentclass[a4paper, 10pt]{article}
 
-\documentclass[11pt, a4paper]{article}
-\usepackage{array, xcolor, lipsum, graphicx}
-\usepackage{geometry}
+% Graphics and colors
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz, tikzpagenodes}
+
+% Font
+\usepackage{fontawesome, fontspec}
+
+% Formatting
+\usepackage[top=0.5cm, left=1cm, right=1cm, bottom=1cm]{geometry}
 \usepackage[onehalfspacing]{setspace}
-\usepackage[ngerman]{babel}
-\usepackage{titlesec}
+\usepackage{hyphenat}
+\usepackage{array, parskip, adjustbox}
+\usepackage{lipsum}
 
-\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
-
-\titleformat*{\section}{\Large\bfseries}
-
-\newcommand{\mybigspace}{.5em}
-\newcommand{\ltrspace}{2em}
-\newcommand{\hlfspace}{1em}
-
-\newcommand{\myname}{Julian Lüken}
-\newcommand{\myemail}{julian.lueken@stud.uni-goettingen.de}
-\newcommand{\mystreet}{Am Hachweg 1}
-\newcommand{\mycity}{37083 Göttingen}
-\newcommand{\myphone}{01577 3587775}
-\newcommand{\recipient}{
-		\textbf{Knappschaft}\\
-		\textbf{Bürgerentlastungsgesetz KV}\\
-		\textbf{Fachzentrum Beitragseinzug}\\
-		Knappschaftstraße 1\\
-		44799 Bochum
+% Data
+\newcommand{\myFirstName}{Julian}
+\newcommand{\myLastName}{Lüken}
+\newcommand{\myEmail}{julian-lueken@t-online.de}
+\newcommand{\myStreet}{Am Hachweg 1}
+\newcommand{\myCity}{37083 Göttingen}
+\newcommand{\myPhone}{+49 1577 3587775}
+\newcommand{\myCountry}{Germany}
+\newcommand{\myRecipient}{
+		\textbf{Google Headquarters}\\
+		1600 Amphitheatre Parkway\\
+		Mountain View, CA94043\\
+		USA
 }
+
+\newcommand{\myName}{\myFirstName{} \myLastName}
+\newcommand{\myBigSpace}{.5em}
+\newcommand{\myLetterSpace}{2em}
+\newcommand{\myHalfSpace}{1em}
+
+% Set document font
+\setmainfont[
+	Extension	= .ttf,
+	Ligatures	= TeX,
+	BoldFont	= NotoSans-CondensedBold,
+	ItalicFont	= NotoSans-CondensedItalic
+]{NotoSans-Condensed}
 
 % remove if more than one page
 \pagenumbering{gobble}
@@ -38,8 +52,8 @@
 	\noindent
 	\begin{minipage}{\textwidth}
 		\flushleft
-		\scriptsize \myname{} $\cdot$ \mystreet{} $\cdot$ \mycity{} \\
-		\normalsize \recipient
+		\scriptsize \myName{} $\cdot$ \myStreet{} $\cdot$ \myCity{} $\cdot$ \myCountry\\
+		\normalsize \myRecipient
 	\end{minipage}
 
 	\vspace{6em}
@@ -47,22 +61,22 @@
 	\begin{minipage}{\textwidth}
 		\flushright
 		\today
-	\end{minipage}\\[\hlfspace]
+	\end{minipage}\\[\myHalfSpace]
 	\flushleft
 	\begin{minipage}{\textwidth}
 		\flushleft
-		\textbf{AW: Rechnung}
+		\textbf{Position Name}
 	\end{minipage}
 \end{center}
 \setlength{\parindent}{0pt}
-Sehr geehrte Damen und Herren,
-\vspace{\hlfspace}
+Dear recruitment team,
+\vspace{\myHalfSpace}
 
-mein Studentenstatus hat sich in den letzten Monaten nicht verändert. Das ist der angehängten Immatrikulationsbescheinigung auch zu entnehmen. Darum bitte ich zusätzlich zu dieser \glqq{}Veränderung\grqq{} um eine Überprüfung der letzten Rechnung (für Dezember). Mein Studium endet voraussichtlich am 31. März 2023. Ich danke vielmals. Über eine Rückmeldung würde ich mich sehr freuen.\vspace{\hlfspace}
+\lipsum[2-4]\vspace{\myHalfSpace}
 
-Mit freundlichen Grüßen\\[\ltrspace]
+Kind regards,\\[\myLetterSpace]
 \includegraphics[height=3em]{../assets/sign.png}
-\\[\hlfspace]
-\myname
+\\[\myHalfSpace]
+\myName
 
 \end{document}
