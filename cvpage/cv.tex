@@ -89,7 +89,7 @@
 % Header
 \newcommand{\myNameBar} {
 	\flushleft
-	\begin{minipage}[c]{.14\textwidth}
+	\begin{minipage}[c]{.16\textwidth}
 		\vspace{0pt}
 		\flushleft
 		\includegraphics[width=\textwidth]{../assets/profile2_trans_mirrored.png}	
@@ -97,7 +97,7 @@
 		%\centering<image>
 	\end{minipage}
 	\hspace{.025\textwidth}\VRule\hspace{.025\textwidth}
-	\begin{minipage}[c]{.8\textwidth}
+	\begin{minipage}[c]{.78\textwidth}
 		\vspace{0pt}
 		{\Huge \myFirstName{} \textbf{\myLastName}}\\[.5em]
 		My education and practical know-how have made me an expert in Digital Signal Processing and Computer-Aided Design. With my strong mathematical background and software engineering experience, I am able to develop fast and accurate solutions for novel challenges in industry and science.
@@ -115,9 +115,10 @@
 				fill=\myMainColor, 
 				inner sep=2mm, 
 				minimum width=\pagewidth,
-				minimum height=1cm
+				minimum height=0.6cm
 			] at (current page text area.south) {
 				\begin{minipage}{\textwidth}
+					\strut
 					\centering\color{white}\footnotesize
 					\icPlane{} \myEmail
 					\hspace{3em}
