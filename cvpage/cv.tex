@@ -36,8 +36,9 @@
 \newcommand{\myMainColor}{Black!90}
 
 % Rules and spaces
-\newcommand\VRule{\color{\myMainColor}\vrule width 1pt}
-\newcommand\HRule{\color{\myMainColor}\hrule width 1pt}
+\newcommand\VRuleC{{\color{\myMainColor}\vrule width 1pt}}
+\newcommand\VRuleW{{\color{white}\vrule width 1pt}}
+\newcommand\HRule{{\color{\myMainColor}\hrule width 1pt}}
 \newcommand\tableSpace{0.6em}
 
 % Symbols
@@ -96,7 +97,7 @@
 		%\vspace{2em}
 		%\centering<image>
 	\end{minipage}
-	\hspace{.025\textwidth}\VRule\hspace{.025\textwidth}
+	\hspace{.025\textwidth}\VRuleC\hspace{.025\textwidth}
 	\begin{minipage}[c]{.78\textwidth}
 		\vspace{0pt}
 		{\Huge \myFirstName{} \textbf{\myLastName}}\\[.5em]
@@ -155,7 +156,7 @@
 	\begin{minipage}[t]{.49\textwidth}
 		\vspace{0pt}
 		\icMortarBoard \textbf{Qualification}\\[\tableSpace]
-		\begin{tabular}{@{}r!{\VRule}l}
+		\begin{tabular}{@{}r!{\VRuleW}l}
 			2019--2023 	& Applied Computer Science (M. Sc.) 				\\
 						& Specialisation in Scientific Computing 			\\
 						& and Signal Processing 							\\
@@ -176,7 +177,7 @@
 	\begin{minipage}[t]{.49\textwidth}
 		\vspace{0pt}
 		\icFlask \textbf{Academic Projects}\\[\tableSpace]
-		\begin{tabular}{@{}r!{\VRule}l}
+		\begin{tabular}{@{}r!{\VRuleW}l}
 			2022 	& Master thesis project {\bfseries CoolingGen} 						\\
 					& A parametric CAD software using NURBS, specifically designed 		\\
 					& for generating turbine blade cooling geometries 					\\
@@ -200,7 +201,7 @@
 	\begin{minipage}[t]{.49\textwidth}
 		\vspace{0pt}
 		\icRocket \textbf{Career}\\[\tableSpace]
-		\begin{tabular}{@{}r!{\VRule}l}
+		\begin{tabular}{@{}r!{\VRuleW}l}
 			2021--2023 	& Research Associate, Developer 						\\
 						& \icMapMarker German Aerospace Center, Göttingen 		\\[\tableSpace]
 
@@ -211,7 +212,7 @@
 	\begin{minipage}[t]{.49\textwidth}
 		\vspace{0pt}
 		\icWrench \textbf{Jobs}\\[\tableSpace]
-		\begin{tabular}{@{}r!{\VRule}l}
+		\begin{tabular}{@{}r!{\VRuleW}l}
 			2017--2019 	& Postman 												\\
 						& \icMapMarker Deutsche Post AG, Göttingen 				\\[\tableSpace]
 
@@ -223,26 +224,26 @@
 	\myColorBar{Skills}
 	\begin{minipage}[t]{.49\textwidth}
 		\vspace{0pt}
-		\begin{tabular}{@{}c@{\phantom{ }}l!{\VRule}l}
-			\icKeybrd	& Programming		& Long-time experience with 				\\
-						& Languages			& Python, C, C++, Java, Matlab 				\\[\tableSpace]
+		\begin{tabular}{@{}c@{\phantom{ }}l!{\VRuleW}l}
+			\icKeybrd	& {\bfseries Programming}		& Long-time experience with 				\\
+						& {\bfseries Languages}			& Python, C, C++, Java, Matlab 				\\[\tableSpace]
 
-			\icFilter	& Digital Signal 	& Processing tools (opencv, scipy) 			\\
-						& Processing		& and visualization tools (matplotlib) 		\\[\tableSpace]
+			\icFilter	& {\bfseries Digital Signal} 	& Processing tools (opencv, scipy) 			\\
+						& {\bfseries Processing}		& and visualization tools (matplotlib) 		\\[\tableSpace]
 							
-			\icCube 	& Computer-Aided	& Programming with OpenCASCADE				\\
-						& Design			& or my personal C++ CAD kernel				\\
-						& 					& (visualization with FreeCAD) 				\\[\tableSpace]
+			\icCube 	& {\bfseries Computer-Aided}	& Programming with OpenCASCADE				\\
+						& {\bfseries Design}			& or my personal C++ CAD kernel				\\
+						& 								& (visualization with FreeCAD) 				\\[\tableSpace]
 		\end{tabular}
 	\end{minipage}
 	\begin{minipage}[t]{.49\textwidth}
 		\vspace{0pt}
-		\begin{tabular}{@{}c@{\phantom{ }}l!{\VRule}l}
-			\icMath 	& Math 			& Excellent knowledge of Geometry, 			\\
-						&				& Linear Algebra and Fourier Analysis, 		\\
-						&				& more specifically NURBS and tomography	\\[\tableSpace]
-			\icLang 	& Languages 	& German (native), English (CEFR C1) 		\\[\tableSpace]
-			\icTerm		& Misc			& LaTeX, Javascript, HTML, CSS, git, bash 	\\[\tableSpace]
+		\begin{tabular}{@{}c@{\phantom{ }}l!{\VRuleW}l}
+			\icMath 	& {\bfseries Math} 			& Excellent knowledge of Geometry, 			\\
+						&							& Linear Algebra and Fourier Analysis, 		\\
+						&							& more specifically NURBS and tomography	\\[\tableSpace]
+			\icLang 	& {\bfseries Languages} 	& German (native), English (CEFR C1) 		\\[\tableSpace]
+			\icTerm		& {\bfseries Misc}			& LaTeX, Javascript, HTML, CSS, git, bash 	\\[\tableSpace]
 		\end{tabular}
 	\end{minipage}
 
