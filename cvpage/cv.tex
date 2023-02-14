@@ -14,6 +14,7 @@
 \usepackage[onehalfspacing]{setspace}
 \usepackage[none]{hyphenat}
 \usepackage{array, parskip, adjustbox}
+\usepackage{hyperref}
 
 % Data
 \newcommand{\myFirstName}{Julian}
@@ -40,6 +41,7 @@
 \newcommand\VRuleW{{\color{white}\vrule width 1pt}}
 \newcommand\HRule{{\color{\myMainColor}\hrule width 1pt}}
 \newcommand\tableSpace{0.6em}
+\newcommand\myFooterSpace{\hspace{3em}}
 
 % Symbols
 \newcommand{\icMapMarker}{{\color{\myMainColor}\faMapMarker{} }}
@@ -59,6 +61,9 @@
 \newcommand{\icMath}{{\color{\myMainColor}\faSuperscript{} }}
 \newcommand{\icTerm}{{\color{\myMainColor}\faTerminal{} }}
 \newcommand{\icLang}{{\color{\myMainColor}\faCommentingO{} }}
+
+\newcommand{\icGitHub}{{\color{\myMainColor}\faGithub{} }}
+\newcommand{\icWeb}{{\color{\myMainColor}\faGlobe{} }}
 
 
 % No page numbers
@@ -101,7 +106,10 @@
 	\begin{minipage}[c]{.78\textwidth}
 		\vspace{0pt}
 		{\Huge \myFirstName{} \textbf{\myLastName}}\\[.5em]
-		My education and practical know-how have made me an expert in Digital Signal Processing and Computer-Aided Design. With my strong mathematical background and software engineering experience, I am able to develop fast and accurate solutions for novel challenges in industry and science.
+		My education and practical know-how have made me an expert in Digital Signal Processing and Computer-Aided Design. With my strong mathematical background and software engineering experience, I am able to develop fast and accurate solutions for novel challenges in industry and science.\\[.5em]
+		\href{https://github.com/boolean-julian/}{\icGitHub github.com/boolean-julian}
+		\hspace{1em}
+		\href{https://boolean-julian.github.io/}{\icWeb boolean-julian.github.io}
 	\end{minipage}
 }
 
@@ -123,9 +131,9 @@
 					\strut
 					\centering\color{white}\footnotesize
 					\icPlane{} \myEmail
-					\hspace{3em}
+					\myFooterSpace
 					\icPhone{} \myPhone
-					\hspace{3em}
+					\myFooterSpace
 					\icHome{} \myStreet, \myCity, \myCountry
 				\end{minipage}
 			};
