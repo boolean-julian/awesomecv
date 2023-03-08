@@ -1,0 +1,23 @@
+\newcommand{\myRecipient}{
+		\textbf{AMOLF}\\
+		Hypersmart Matter Group\\
+		Science Park 104\\
+		1098 XG Amsterdam\\
+		The Netherlands
+}
+
+Title:
+PhD-student: Vibrating structures you can talk to
+
+Text:
+Dear Dr. Marc Serra Garcia,
+
+I am writing in response to your advertisement for the PhD vacancy at the hypersmart matter group. I believe my experience, skills and qualification are not only an asset, but an ideal match to the requirements of your operation.
+
+I currently live in Göttingen, where I very recently finished my M.Sc. studies in Applied Computer Science at the Georg-August University. I have specialized in Scientific Computing. During my studies I took three consecutive courses on Mathematical Signal and Image Processing at the Institute of Numerical and Applied Mathematics, followed by a masters thesis in the same field. I am therefore well-acquainted with signal processing methods related to the Fourier transform, which I believe is the foundation of all sound processing.
+
+Presently, I work at the Institute of Propulsion Technology at the German Aerospace Center, where I wrote my master's thesis in cooperation with my university. In the course of this thesis project I developed a turbine blade cooling geometry generator called CoolingGen. The German Aerospace Center have their own CAD kernel. The small set of input parameters used to design blades yields a semantic interface between geometry creation and physical function. I was able to prove my deep mathematical understanding of linear algebra and computer-aided design and my implementation talent in C/C++ and Python. To assess the quality of certain features of the software, the project CoolingGen also required me to communicate features and requirements with an interdisciplinary team, which was not only pleasant, but always yielded much productive value.
+
+My previous experience in signal processing makes me the perfect PhD candidate to develop a technique which can recognize a certain nonlinear resonance pattern. I am looking forward to closely working within a team of experts dedicated to this objective. While I am not sure whether this relates to the given task or not, I am also a hobby-ist electrician who likes to tinker with his Arduino.
+
+Even though I whole-heartedly enjoy my current work, I feel that I have to move on. Working towards the goal of building a chip that utilizes only the kinetic energy that it is supplied with through its usage is an exciting and revolutionary approach, which requires a wide array of skills. While I am certain that I have what it takes, I acknowledge and appreciate the challenges of circuit design, which I am not familiar with. I am looking forward to hearing from you.
