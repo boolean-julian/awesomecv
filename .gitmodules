@@ -1,0 +1,3 @@
+[submodule "private"]
+	path = private
+	url = https://github.com/boolean-julian/awesomecv-private.git
