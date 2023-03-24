@@ -1,30 +1,66 @@
+\makeatletter
 % Color scheme, check https://en.wikibooks.org/wiki/LaTeX/Colors
-\newcommand{\myMainColor}{Black!90}
+\newcommand{\@myMainColor}{Black!90}
+\newcommand{\myMainColor}[1]{\renewcommand{\@myMainColor}{#1}}
+
 
 % Personal data
-\newcommand{\myFirstName}{John}
-\newcommand{\myLastName}{Doe}
-\newcommand{\myEmail}{johndoe@doemail.com}
-\newcommand{\myStreet}{Street Name 12}
-\newcommand{\myCity}{12345 Town Name}
-\newcommand{\myPhone}{+49 999 9876543}
-\newcommand{\myCountry}{Country}
+\newcommand{\@myFirstName}{John}
+\newcommand{\myFirstName}[1]{\renewcommand{\@myFirstName}{#1}}
+
+\newcommand{\@myLastName}{Doe}
+\newcommand{\myLastName}[1]{\renewcommand{\@myLastName}{#1}}
+
+\newcommand{\@myEmail}{johndoe@doemail.com}
+\newcommand{\myEmail}[1]{\renewcommand{\@myEmail}{#1}}
+
+\newcommand{\@myStreet}{Street Name 12}
+\newcommand{\myStreet}[1]{\renewcommand{\@myStreet}{#1}}
+
+\newcommand{\@myCity}{12345 Town Name}
+\newcommand{\myCity}[1]{\renewcommand{\@myCity}{#1}}
+
+\newcommand{\@myPhone}{+49 999 9876543}
+\newcommand{\myPhone}[1]{\renewcommand{\@myPhone}{#1}}
+
+\newcommand{\@myCountry}{Country}
+\newcommand{\myCountry}[1]{\renewcommand{\@myCountry}{#1}}
+
 
 % Profile. Careful: No https:// prefix in URL declaration
-\newcommand{\myProfilePicture}{../assets/profile.png}
-\newcommand{\myProfileText}{Profile text.}
-\newcommand{\myGithubLink}{link-to-my-github.com/}
-\newcommand{\myWebsiteLink}{link-to-my-website.com/}
-\newcommand{\mySignaturePath}{../assets/sign.png}
+\newcommand{\@myProfilePicture}{../assets/profile.png}
+\newcommand{\myProfilePicture}[1]{\renewcommand{\@myProfilePicture}{#1}}
+
+\newcommand{\@myProfileText}{Profile text.}
+\newcommand{\myProfileText}[1]{\renewcommand{\@myProfileText}{#1}}
+
+\newcommand{\@myGithubLink}{link-to-my-github.com/}
+\newcommand{\myGithubLink}[1]{\renewcommand{\@myGithubLink}{#1}}
+
+\newcommand{\@myWebsiteLink}{link-to-my-website.com/}
+\newcommand{\myWebsiteLink}[1]{\renewcommand{\@myWebsiteLink}{#1}}
+
+\newcommand{\@mySignaturePath}{../assets/sign.png}
+\newcommand{\mySignaturePath}[1]{\renewcommand{\@mySignaturePath}{#1}}
+
 
 % Letter definition
-\newcommand{\myRecipient}{
+\newcommand{\@myRecipient}{
 		\textbf{The Company}\\
 		The Guy\\
 		The Street 12\\
 		12346 The Town\\
 		The Country
 }
-\newcommand{\myDate}{\today}
-\newcommand{\myLetterTitle}{Letter title}
-\newcommand{\myComplimentaryClose}{Kind regards,}
+\newcommand{\myRecipient}[1]{\renewcommand{\@myRecipient}{#1}}
+
+\newcommand{\@myDate}{\today}
+\newcommand{\myDate}[1]{\renewcommand{\@myDate}{#1}}
+
+\newcommand{\@myLetterTitle}{Letter title}
+\newcommand{\myLetterTitle}[1]{\renewcommand{\@myLetterTitle}{#1}}
+
+\newcommand{\@myComplimentaryClose}{Kind regards,}
+\newcommand{\myComplimentaryClose}[1]{\renewcommand{\@myComplimentaryClose}{#1}}
+
+\makeatother
