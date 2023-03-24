@@ -6,7 +6,7 @@ AwesomeCV is a CV and motivation letter template made by myself and for myself. 
 * LuaLaTeX
 
 ## Editing
-Just edit the files in the custom folder. You can enter your personal data, recipient, vacancy title etc. into the data.tex file. After modifying the cv.tex and motivation.tex to your liking, you can build these two files with LuaLaTeX to get the result. If you want to merge the two documents, just run the merged.tex file through lualatex.
+You can edit the files in the customize folder. Your personal data, recipient, vacancy title etc. go into the data.tex. After modifying the cv.tex and motivation.tex to your liking, you can build these two files with LuaLaTeX to get the result. If you want to merge the two documents, just run the merged.tex file through LuaLaTeX.
 
 ## Example
 This is what the template looks like
