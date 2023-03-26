@@ -5,36 +5,38 @@
 % Default input
 \input{../classes/Packages.tex}
 \input{../classes/DefaultData.tex}
-\usepackage[top=1cm, left=1cm, right=1cm, bottom=1cm]{geometry}
+\RequirePackage[top=1cm, left=1cm, right=1cm, bottom=1cm]{geometry}
+
+\makeatletter
 
 % Rules and spaces
-\newcommand\VRuleC{{\color{\myMainColor}\vrule width 1pt}}
+\newcommand\VRuleC{{\color{\@myMainColor}\vrule width 1pt}}
 \newcommand\VRuleW{{\color{white}\vrule width 1pt}}
-\newcommand\HRule{{\color{\myMainColor}\hrule width 1pt}}
+\newcommand\HRule{{\color{\@myMainColor}\hrule width 1pt}}
 \newcommand\tableSpace{0.6em}
 \newcommand\myFooterSpace{\hspace{3em}}
 
 % Symbols
-\newcommand{\icMapMarker}{{\color{\myMainColor}\faMapMarker{} }}
-\newcommand{\icMortarBoard}{{\color{\myMainColor}\faMortarBoard{} }}
-\newcommand{\icFlask}{{\color{\myMainColor}\faFlask{} }}
-\newcommand{\icRocket}{{\color{\myMainColor}\faRocket{} }}
-\newcommand{\icWrench}{{\color{\myMainColor}\faWrench{} }}
+\newcommand{\icMapMarker}{{\color{\@myMainColor}\faMapMarker{} }}
+\newcommand{\icMortarBoard}{{\color{\@myMainColor}\faMortarBoard{} }}
+\newcommand{\icFlask}{{\color{\@myMainColor}\faFlask{} }}
+\newcommand{\icRocket}{{\color{\@myMainColor}\faRocket{} }}
+\newcommand{\icWrench}{{\color{\@myMainColor}\faWrench{} }}
 
 \newcommand{\icUser}{{\color{white}\faUser{} }}
 \newcommand{\icHome}{{\color{white}\faHome{} }}
 \newcommand{\icPhone}{{\color{white}\faPhone{} }}
 \newcommand{\icPlane}{{\color{white}\faPaperPlane{} }}
 
-\newcommand{\icCube}{{\color{\myMainColor}\faCube{} }}
-\newcommand{\icFilter}{{\color{\myMainColor}\faFilter{} }}
-\newcommand{\icKeybrd}{{\color{\myMainColor}\faKeyboardO{} }}
-\newcommand{\icMath}{{\color{\myMainColor}\faSuperscript{} }}
-\newcommand{\icTerm}{{\color{\myMainColor}\faTerminal{} }}
-\newcommand{\icLang}{{\color{\myMainColor}\faCommentingO{} }}
+\newcommand{\icCube}{{\color{\@myMainColor}\faCube{} }}
+\newcommand{\icFilter}{{\color{\@myMainColor}\faFilter{} }}
+\newcommand{\icKeybrd}{{\color{\@myMainColor}\faKeyboardO{} }}
+\newcommand{\icMath}{{\color{\@myMainColor}\faSuperscript{} }}
+\newcommand{\icTerm}{{\color{\@myMainColor}\faTerminal{} }}
+\newcommand{\icLang}{{\color{\@myMainColor}\faCommentingO{} }}
 
-\newcommand{\icGitHub}{{\color{\myMainColor}\faGithub{} }}
-\newcommand{\icWeb}{{\color{\myMainColor}\faGlobe{} }}
+\newcommand{\icGitHub}{{\color{\@myMainColor}\faGithub{} }}
+\newcommand{\icWeb}{{\color{\@myMainColor}\faGlobe{} }}
 
 % Colored section bar
 \newcommand{\myColorBar}[1] {
@@ -44,7 +46,7 @@
 			\node [
 				draw=none,
 				rectangle, 
-				fill=\myMainColor, 
+				fill=\@myMainColor, 
 				inner sep=2mm, 
 				minimum width=\pagewidth,
 				minimum height=1em
@@ -65,16 +67,16 @@
 	\begin{minipage}[c]{.16\textwidth}
 		\vspace{0pt}
 		\flushleft
-		\includegraphics[width=\textwidth]{\myProfilePicture}
+		\includegraphics[width=\textwidth]{\@myProfilePicture}
 	\end{minipage}
 	\hspace{.025\textwidth}\VRuleC\hspace{.025\textwidth}
 	\begin{minipage}[c]{.78\textwidth}
 		\vspace{0pt}
-		{\Huge \myFirstName{} \textbf{\myLastName}}\\[.5em]
-		\myProfileText\\[.5em]
-		\href{https://\myGithubLink}{\icGitHub \myGithubLink}
+		{\Huge \@myFirstName{} \textbf{\@myLastName}}\\[.5em]
+		\@myProfileText\\[.5em]
+		\href{https://\@myGithubLink}{\icGitHub \@myGithubLink}
 		\hspace{1em}
-		\href{https://\myWebsiteLink}{\icWeb \myWebsiteLink}
+		\href{https://\@myWebsiteLink}{\icWeb \@myWebsiteLink}
 	\end{minipage}
 }
 
@@ -86,7 +88,7 @@
 				draw=none,
 				anchor=north,
 				rectangle, 
-				fill=\myMainColor, 
+				fill=\@myMainColor, 
 				inner sep=2mm, 
 				minimum width=\pagewidth,
 				minimum height=1em,
@@ -95,11 +97,11 @@
 				\begin{minipage}{\textwidth}
 					\strut
 					\centering\color{white}\footnotesize
-					\icPlane{} \myEmail
+					\icPlane{} \@myEmail
 					\myFooterSpace
-					\icPhone{} \myPhone
+					\icPhone{} \@myPhone
 					\myFooterSpace
-					\icHome{} \myStreet, \myCity, \myCountry
+					\icHome{} \@myStreet, \@myCity, \@myCountry
 				\end{minipage}
 			};
 		\end{tikzpicture}
@@ -115,7 +117,7 @@
 				anchor=east,
 				yshift=0.7cm
 			] at (current page text area.south east) {
-				\includegraphics[height=3em]{\mySignaturePath}
+				\includegraphics[height=3em]{\@mySignaturePath}
 			};
 		\end{tikzpicture}
 	\end{centering}
@@ -147,3 +149,5 @@
 			}{	
 		\end{tabular}
 	\end{minipage}}
+
+\makeatother
