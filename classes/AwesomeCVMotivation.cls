@@ -5,10 +5,12 @@
 % Default input
 \input{../classes/Packages.tex}
 \input{../classes/DefaultData.tex}
-\usepackage[top=4.5cm, left=2.5cm, right=2cm, bottom=2.5cm]{geometry}
+\RequirePackage[top=4.5cm, left=2.5cm, right=2cm, bottom=2.5cm]{geometry}
+
+\makeatletter
 
 % Gaps and spaces
-\newcommand{\myName}{\myFirstName{} \myLastName}
+\newcommand{\myName}{\@myFirstName{} \@myLastName}
 \newcommand{\myBigSpace}{.5em}
 \newcommand{\myLetterSpace}{2em}
 \newcommand{\myHalfSpace}{1em}
@@ -19,28 +21,28 @@
 		\noindent
 		\begin{minipage}{\textwidth}
 			\flushleft
-			\scriptsize \myName{} $\cdot$ \myStreet{} $\cdot$ \myCity{} $\cdot$ \myCountry\\
-			\normalsize \myRecipient
+			\scriptsize \myName{} $\cdot$ \@myStreet{} $\cdot$ \@myCity{} $\cdot$ \@myCountry\\
+			\normalsize \@myRecipient
 		\end{minipage}
 
 		\vspace{4em}
 		\flushright
 		\begin{minipage}{\textwidth}
 			\flushright
-			\myDate
+			\@myDate
 		\end{minipage}\\[\myHalfSpace]
 		\flushleft
 		\begin{minipage}{\textwidth}
 			\flushleft
-			\textbf{\myLetterTitle}
+			\textbf{\@myLetterTitle}
 		\end{minipage}
 	\end{center}
 	\vspace{\myHalfSpace}}
 
 % goodbye
 \newcommand{\setComplimentaryClose}{	
-	\myComplimentaryClose\\[\myLetterSpace]
-	\includegraphics[height=3em]{\mySignaturePath}
+	\@myComplimentaryClose\\[\myLetterSpace]
+	\includegraphics[height=3em]{\@mySignaturePath}
 	\\[\myHalfSpace]
 	\myName}
 
@@ -48,3 +50,5 @@
 \newenvironment{myLetter}{\setHeaderAndTitle}{
 
 \setComplimentaryClose}
+
+\makeatother
