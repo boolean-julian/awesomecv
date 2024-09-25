@@ -5,7 +5,7 @@
 % Default input
 \input{../classes/Packages.tex}
 \input{../classes/DefaultData.tex}
-\RequirePackage[top=1cm, left=1cm, right=1cm, bottom=1cm]{geometry}
+\RequirePackage[top=0.8cm, left=1cm, right=1cm, bottom=1cm]{geometry}
 
 \makeatletter
 
@@ -13,6 +13,7 @@
 \newcommand\VRuleC{{\color{\@myMainColor}\vrule width 1pt}}
 \newcommand\VRuleW{{\color{white}\vrule width 1pt}}
 \newcommand\HRule{{\color{\@myMainColor}\hrule width 1pt}}
+\newcommand\halfSpace{0.15em}
 \newcommand\tableSpace{0.6em}
 \newcommand\myFooterSpace{\hspace{3em}}
 
@@ -22,6 +23,7 @@
 \newcommand{\icFlask}{{\color{\@myMainColor}\faFlask{} }}
 \newcommand{\icRocket}{{\color{\@myMainColor}\faRocket{} }}
 \newcommand{\icWrench}{{\color{\@myMainColor}\faWrench{} }}
+\newcommand{\icUsers}{{\color{\@myMainColor}\faUsers{} }}
 
 \newcommand{\icUser}{{\color{white}\faUser{} }}
 \newcommand{\icHome}{{\color{white}\faHome{} }}
@@ -41,15 +43,15 @@
 % Colored section bar
 \newcommand{\myColorBar}[1] {
 	\begin{centering}
-		\vspace{2em}
+		\vspace{1.6em}
 		\begin{tikzpicture}[overlay]
 			\node [
 				draw=none,
 				rectangle, 
 				fill=\@myMainColor, 
-				inner sep=2mm, 
+				inner sep=1.5mm, 
 				minimum width=\pagewidth,
-				minimum height=1em
+				minimum height=0.8em
 			] (a) {
 				\begin{minipage}{\textwidth}
 					\flushleft\color{white}\bfseries
@@ -57,20 +59,25 @@
 				\end{minipage}
 			};
 		\end{tikzpicture}\\
-		\vspace{1em}
+		\vspace{0.8em}
 	\end{centering}
+}
+
+% DOI links
+\newcommand{\myDoi}[1] {
+	\href{https://doi.org/#1}{\textsc{doi:}\normalsize{} #1}	
 }
 
 % Header
 \newcommand{\myNameBar} {
 	\flushleft
-	\begin{minipage}[c]{.16\textwidth}
+	\begin{minipage}[c]{.20\textwidth}
 		\vspace{0pt}
 		\flushleft
 		\includegraphics[width=\textwidth]{\@myProfilePicture}
 	\end{minipage}
 	\hspace{.025\textwidth}\VRuleC\hspace{.025\textwidth}
-	\begin{minipage}[c]{.78\textwidth}
+	\begin{minipage}[c]{.74\textwidth}
 		\vspace{0pt}
 		{\Huge \@myFirstName{} \textbf{\@myLastName}}\\[.5em]
 		\@myProfileText\\[.5em]
