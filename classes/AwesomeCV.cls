@@ -19,7 +19,7 @@
 
 % Symbols
 \newcommand{\icMapMarker}{{\color{\@myMainColor}\faMapMarker{} }}
-\newcommand{\icMortarBoard}{{\color{\@myMainColor}\faMortarBoard{} }}
+\newcommand{\icMortarBoard}{{\color{\@myMainColor}\faGraduationCap{} }}
 \newcommand{\icFlask}{{\color{\@myMainColor}\faFlask{} }}
 \newcommand{\icRocket}{{\color{\@myMainColor}\faRocket{} }}
 \newcommand{\icWrench}{{\color{\@myMainColor}\faWrench{} }}
@@ -32,13 +32,20 @@
 
 \newcommand{\icCube}{{\color{\@myMainColor}\faCube{} }}
 \newcommand{\icFilter}{{\color{\@myMainColor}\faFilter{} }}
-\newcommand{\icKeybrd}{{\color{\@myMainColor}\faKeyboardO{} }}
+\newcommand{\icKeybrd}{{\color{\@myMainColor}\faKeyboard{} }}
 \newcommand{\icMath}{{\color{\@myMainColor}\faSuperscript{} }}
 \newcommand{\icTerm}{{\color{\@myMainColor}\faTerminal{} }}
-\newcommand{\icLang}{{\color{\@myMainColor}\faCommentingO{} }}
+\newcommand{\icLang}{{\color{\@myMainColor}\faComment{} }} 
 
 \newcommand{\icGitHub}{{\color{\@myMainColor}\faGithub{} }}
 \newcommand{\icWeb}{{\color{\@myMainColor}\faGlobe{} }}
+
+\newcommand{\icBike}{{\color{\@myMainColor}\faBicycle{} }}
+\newcommand{\icHike}{{\color{\@myMainColor}\faMountain{} }}
+\newcommand{\icGuitar}{{\color{\@myMainColor}\faGuitar{} }}
+\newcommand{\icCook}{{\color{\@myMainColor}\faPizzaSlice{} }}
+\newcommand{\icRead}{{\color{\@myMainColor}\faBookOpen{} }}
+\newcommand{\icGame}{{\color{\@myMainColor}\faGamepad{} }}
 
 % Colored section bar
 \newcommand{\myColorBar}[1] {
@@ -150,9 +157,9 @@
 		\end{tabular}
 	\end{minipage}}
 \newenvironment{myInterestSubsection}{
-	\begin{minipage}[t]{.49\textwidth}
+	\begin{minipage}[t]{.32\textwidth}
 		\vspace{0pt}
-		\begin{tabular}{@{}l}
+		\begin{tabular}{@{}c@{\phantom{ }}l}
 			}{	
 		\end{tabular}
 	\end{minipage}}
