@@ -21,7 +21,7 @@
 		\noindent
 		\begin{minipage}{\textwidth}
 			\flushleft
-			\scriptsize \myName{} $\cdot$ \@myStreet{} $\cdot$ \@myCity{} $\cdot$ \@myCountry\\
+			\scriptsize \myName{} $\cdot$ \@myStreet{} $\cdot$ \@myCity{}\\
 			\normalsize \@myRecipient
 		\end{minipage}
 
@@ -42,9 +42,9 @@
 % goodbye
 \newcommand{\setComplimentaryClose}{	
 	\@myComplimentaryClose\\[\myLetterSpace]
-	\includegraphics[height=3em]{\@mySignaturePath}
+	\phantom{\includegraphics[height=3em]{\@mySignaturePath}}
 	\\[\myHalfSpace]
-	\myName}
+	Julian Lüken \phantom{aaaaaaaaaaaaaaaaa} Lina Meiners}
 
 % define letter env
 \newenvironment{myLetter}{\setHeaderAndTitle}{
