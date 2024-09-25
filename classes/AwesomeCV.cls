@@ -70,9 +70,9 @@
 	\end{centering}
 }
 
-% DOI links
+% DOI links / Digital Object Identifier
 \newcommand{\myDoi}[1] {
-	\href{https://doi.org/#1}{\textsc{doi:}\normalsize{} #1}	
+	\href{https://doi.org/#1}{\textbf{\textsc{{\color{\@myMainColor}doi}}}\normalsize{} #1}	
 }
 
 % Header
