@@ -5,7 +5,7 @@
 % Default input
 \input{../classes/Packages.tex}
 \input{../classes/DefaultData.tex}
-\RequirePackage[top=0.8cm, left=1cm, right=1cm, bottom=1cm]{geometry}
+\RequirePackage[top=1cm, left=1cm, right=1cm, bottom=1cm]{geometry}
 
 \makeatletter
 
@@ -13,12 +13,11 @@
 \newcommand\VRuleC{{\color{\@myMainColor}\vrule width 1pt}}
 \newcommand\VRuleW{{\color{white}\vrule width 1pt}}
 \newcommand\HRule{{\color{\@myMainColor}\hrule width 1pt}}
-\newcommand\halfSpace{0.15em}
 \newcommand\tableSpace{0.6em}
 \newcommand\myFooterSpace{\hspace{3em}}
 
 % Symbols
-\newcommand{\icMapMarker}{{\color{\@myMainColor}\faMapMarker{} }}
+\newcommand{\icMapMarker}{{\color{\@myMainColor}\faMapMarker*{} }}
 \newcommand{\icMortarBoard}{{\color{\@myMainColor}\faGraduationCap{} }}
 \newcommand{\icFlask}{{\color{\@myMainColor}\faFlask{} }}
 \newcommand{\icRocket}{{\color{\@myMainColor}\faRocket{} }}
@@ -32,7 +31,7 @@
 
 \newcommand{\icAppl}{{\color{\@myMainColor}\faBrain{} }}
 \newcommand{\icCode}{{\color{\@myMainColor}\faCode{} }}
-\newcommand{\icMath}{{\color{\@myMainColor}\faEquals{} }}
+\newcommand{\icMath}{{\color{\@myMainColor}\Large\boldmath$\pi${} }}
 \newcommand{\icMisc}{{\color{\@myMainColor}\faCodeBranch{} }}
 \newcommand{\icLang}{{\color{\@myMainColor}\faCommentDots{} }} 
 
@@ -52,7 +51,7 @@
 % Colored section bar
 \newcommand{\myColorBar}[1] {
 	\begin{centering}
-		\vspace{1.6em}
+		\vspace{2em}
 		\begin{tikzpicture}[overlay]
 			\node [
 				draw=none,
@@ -78,7 +77,6 @@
 }
 
 % Header
-%\includegraphics[width=\textwidth]{\@myProfilePicture}
 \newcommand{\myNameBar} {
 	\flushleft
 	\begin{minipage}[c]{.20\textwidth}
@@ -169,7 +167,7 @@
 		\end{tabular}
 	\end{minipage}}
 \newenvironment{myInterestSubsection}{
-	\begin{minipage}[t]{.32\textwidth}
+	\begin{minipage}[t]{.16\textwidth}
 		\vspace{0pt}
 		\begin{tabular}{@{}c@{\phantom{ }}l}
 			}{	
