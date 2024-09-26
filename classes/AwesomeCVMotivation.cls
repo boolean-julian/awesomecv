@@ -42,9 +42,9 @@
 % goodbye
 \newcommand{\setComplimentaryClose}{	
 	\@myComplimentaryClose\\[\myLetterSpace]
-	\phantom{\includegraphics[height=3em]{\@mySignaturePath}}
+	\includegraphics[height=3em]{\@mySignaturePath}
 	\\[\myHalfSpace]
-	Julian Lüken \phantom{aaaaaaaaaaaaaaaaa} Lina Meiners}
+	\@myFirstName{} \@myLastName}
 
 % define letter env
 \newenvironment{myLetter}{\setHeaderAndTitle}{
