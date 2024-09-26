@@ -41,7 +41,7 @@
 
 % goodbye
 \newcommand{\setComplimentaryClose}{	
-	\@myComplimentaryClose\\[\myLetterSpace]
+	\@myComplimentaryClose\\[\myHalfSpace]
 	\includegraphics[height=3em]{\@mySignaturePath}
 	\\[\myHalfSpace]
 	\@myFirstName{} \@myLastName}
