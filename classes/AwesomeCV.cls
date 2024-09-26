@@ -30,15 +30,15 @@
 \newcommand{\icPhone}{{\color{white}\faPhone{} }}
 \newcommand{\icPlane}{{\color{white}\faPaperPlane{} }}
 
-\newcommand{\icCube}{{\color{\@myMainColor}\faCube{} }}
-\newcommand{\icFilter}{{\color{\@myMainColor}\faFilter{} }}
-\newcommand{\icKeybrd}{{\color{\@myMainColor}\faKeyboard{} }}
-\newcommand{\icMath}{{\color{\@myMainColor}\faSuperscript{} }}
-\newcommand{\icTerm}{{\color{\@myMainColor}\faTerminal{} }}
-\newcommand{\icLang}{{\color{\@myMainColor}\faComment{} }} 
+\newcommand{\icAppl}{{\color{\@myMainColor}\faBrain{} }}
+\newcommand{\icCode}{{\color{\@myMainColor}\faCode{} }}
+\newcommand{\icMath}{{\color{\@myMainColor}\faEquals{} }}
+\newcommand{\icMisc}{{\color{\@myMainColor}\faCodeBranch{} }}
+\newcommand{\icLang}{{\color{\@myMainColor}\faCommentDots{} }} 
 
 \newcommand{\icGitHub}{{\color{\@myMainColor}\faGithub{} }}
 \newcommand{\icWeb}{{\color{\@myMainColor}\faGlobe{} }}
+\newcommand{\icLinkedIn}{{\color{\@myMainColor}\faLinkedin{} }}
 
 \newcommand{\icBike}{{\color{\@myMainColor}\faBicycle{} }}
 \newcommand{\icHike}{{\color{\@myMainColor}\faMountain{} }}
@@ -46,6 +46,8 @@
 \newcommand{\icCook}{{\color{\@myMainColor}\faPizzaSlice{} }}
 \newcommand{\icRead}{{\color{\@myMainColor}\faBookOpen{} }}
 \newcommand{\icGame}{{\color{\@myMainColor}\faGamepad{} }}
+
+\newcommand{\icAward}{{\color{Dandelion}\faTrophy{} }}
 
 % Colored section bar
 \newcommand{\myColorBar}[1] {
@@ -62,7 +64,7 @@
 			] (a) {
 				\begin{minipage}{\textwidth}
 					\flushleft\color{white}\bfseries
-					#1\strut
+					\textsc{#1}\strut
 				\end{minipage}
 			};
 		\end{tikzpicture}\\
@@ -76,21 +78,31 @@
 }
 
 % Header
+%\includegraphics[width=\textwidth]{\@myProfilePicture}
 \newcommand{\myNameBar} {
 	\flushleft
 	\begin{minipage}[c]{.20\textwidth}
 		\vspace{0pt}
 		\flushleft
-		\includegraphics[width=\textwidth]{\@myProfilePicture}
+		\begin{tikzpicture}
+			\node [
+				circle, 
+				fill=\@myMainColor,
+				inner sep = -0.133\textwidth
+			] (a) {\includegraphics[width=.95\textwidth]{\@myProfilePicture}};
+		\end{tikzpicture}\\
+
 	\end{minipage}
 	\hspace{.025\textwidth}\VRuleC\hspace{.025\textwidth}
 	\begin{minipage}[c]{.74\textwidth}
 		\vspace{0pt}
 		{\Huge \@myFirstName{} \textbf{\@myLastName}}\\[.5em]
-		\@myProfileText\\[.5em]
+		\@myProfileText\\[0.4em]
 		\href{https://\@myGithubLink}{\icGitHub \@myGithubLink}
-		\hspace{1em}
+		\hspace{0.8em}
 		\href{https://\@myWebsiteLink}{\icWeb \@myWebsiteLink}
+		\hspace{0.8em}
+		\href{https://\@myLinkedInLink}{\icLinkedIn \@myLinkedInLink}
 	\end{minipage}
 }
 
@@ -144,7 +156,7 @@
 \newenvironment{mySubsection}[2]{
 	\begin{minipage}[t]{.49\textwidth}
 		\vspace{0pt}
-		#2 \textbf{#1}\\[\tableSpace]
+		#2 \textbf{\textsc{#1}}\\[\tableSpace]
 		\begin{tabular}{@{}r!{\VRuleW}l}
 			}{
 		\end{tabular}

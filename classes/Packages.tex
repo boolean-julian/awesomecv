@@ -1,3 +1,6 @@
+% System
+\RequirePackage{ifplatform}
+
 % Graphics and colors
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{tikz, tikzpagenodes}
@@ -14,12 +17,21 @@
 \RequirePackage[hidelinks]{hyperref}
 
 % Set document font
-\setmainfont[
-	Extension	= .ttf,
-	Ligatures	= TeX,
-	BoldFont	= NotoSans-CondensedBold,
-	ItalicFont	= NotoSans-CondensedItalic
-]{NotoSans-Condensed}
+\ifwindows
+	\setmainfont[
+		Extension	= .ttf,
+		Ligatures	= TeX,
+		BoldFont	= NotoSans-CondensedBold,
+		ItalicFont	= NotoSans-CondensedItalic
+	]{NotoSans-Condensed}
+\else
+	\setmainfont[
+		Extension	= .ttf,
+		Ligatures	= TeX,
+		BoldFont	= NotoSans_Condensed-Bold,
+		ItalicFont	= NotoSans_Condensed-Italic
+	]{NotoSans_Condensed-Regular}
+\fi
 
 % No page numbers
 \pagenumbering{gobble}
