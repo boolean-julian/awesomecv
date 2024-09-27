@@ -1,6 +1,9 @@
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
 *.pdf
+!customize/motivation.pdf
+!customize/cv.pdf
+!merged.pdf
 
 *.aux
 *.lof
