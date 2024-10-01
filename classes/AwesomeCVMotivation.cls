@@ -26,15 +26,16 @@
 		\end{minipage}
 
 		\vspace{4em}
-		\flushright
-		\begin{minipage}{\textwidth}
-			\flushright
-			\@myDate
-		\end{minipage}\\[\myHalfSpace]
 		\flushleft
-		\begin{minipage}{\textwidth}
+		\begin{minipage}{.7\textwidth}
+			\vspace{0pt}
 			\flushleft
 			\textbf{\@myLetterTitle}
+		\end{minipage}
+		\begin{minipage}{.27\textwidth}
+			\vspace{0pt}
+			\flushright
+			\@myDate
 		\end{minipage}
 	\end{center}
 	\vspace{\myHalfSpace}}
