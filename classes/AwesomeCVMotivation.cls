@@ -35,7 +35,7 @@
 		\begin{minipage}{.29\textwidth}
 			\vspace{0pt}
 			\flushright
-			\@myDate{}s
+			\@myDate
 		\end{minipage}
 	\end{center}
 	\vspace{\myHalfSpace}}
